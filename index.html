@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delight</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay loop muted playsinline id="bg-video">
+        <source src="https://videos.pexels.com/video-files/856573/856573-sd_640_360_25fps.mp4" type="video/mp4">
+    </video>
+    <header>
+        <h1>Food Delight</h1>
+        <div class="cart">
+            🛒 Cart: <span id="cart-count">0</span> items | ₹<span id="cart-total">0</span>
+        </div>
+    </header>
+    
+    <section class="menu">
+        <h2>Menu</h2>
+        <div class="items">
+            <!-- Food items with images -->
+            <div class="food-item" data-name="Biriyani" data-price="120">
+                <img src="https://imgs.search.brave.com/rf_HPcqH22_S-amQRVuYy7lXA3KizQo04E64uMg85nE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1LzUxLzA3LzI1/LzM2MF9GXzU1MTA3/MjU1OF9yRU51eDlm/cWxlYzVHUEJKU2FU/b1Q2OXhqY1lpR3hq/ZS5qcGc" alt="Burger">
+                <h3>Biriyani</h3>
+                <p>Price: ₹260</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="food-item" data-name="Fried Chicken" data-price="120">
+                <img src="https://imgs.search.brave.com/Whucj0aC2amlFr6D1fAFKE2WwXPKwbWYimwnvqCutZY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAzLzMwLzUyLzc2/LzM2MF9GXzMzMDUy/NzY5OV9DcmNyQ2Jr/WlhpbjBCenBFbnJS/QzEzMmRRNjBYWnJh/Yy5qcGc" alt="Burger">
+                <h3>Fried Chicken</h3>
+                <p>Price: ₹110</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="food-item" data-name="Burger" data-price="120">
+                <img src="https://imgs.search.brave.com/Exz0r7WjPVvJhgIx13vh3muj6GNWixRAh5mrsu3697c/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1LzYxLzc4LzY5/LzM2MF9GXzU2MTc4/Njk1MV9JZFFidFIw/YmdhM1J6SVNnb2RH/dklSTUZFQnFtamZj/bi5qcGc" alt="Burger">
+                <h3>Burger</h3>
+                <p>Price: ₹120</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="food-item" data-name="Pizza" data-price="250">
+                <img src="https://imgs.search.brave.com/HoMAn97nzDhLkmtgknMUOZf_oPFLzGy2R0agNb3ezZc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzE2LzY4LzQx/LzM2MF9GXzIxNjY4/NDE4NV9Ub0ZGdUxu/ZnVmMHZBV1Aweklh/c1JXVUtkRUtqblNW/Ni5qcGc" alt="Pizza">
+                <h3>Pizza</h3>
+                <p>Price: ₹250</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="food-item" data-name="Pasta" data-price="180">
+                <img src="https://imgs.search.brave.com/QiLmGbm3bkJILqmiI6Z5DoEOLg0TSE3pxh-l2eU49vw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTEz/Njc2MzAyL3Bob3Rv/L3NwYWdoZXR0aS13/aXRoLXBlc3RvLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz15/Q1Ftdnd2RnF2Q2pr/MnZUcVNiYy1uNVI2/a3ZkX0xwMUEwcmNy/UjUyZjJjPQ" alt="Pasta">
+                <h3>Pasta</h3>
+                <p>Price: ₹180</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="food-item" data-name="French Fries" data-price="100">
+                <img src="https://imgs.search.brave.com/fkQHrwMymHW0LjgFLMIIhywvytIS-3uG_t0hwR8Kvcc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzgyLzE1LzYx/LzM2MF9GXzE4MjE1/NjEzMV9ka1gyRVpJ/end3S25CN3dTSWl3/cG1RUDVodDhYS3Np/by5qcGc" alt="French Fries">
+                <h3>French Fries</h3>
+                <p>Price: ₹100</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="food-item" data-name="Sandwich" data-price="150">
+                <img src="https://imgs.search.brave.com/tLVDqp-7M3Vsn2vH5lzB9q4p2Yc4JKU3Qf1S4FGlYWg/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTMw/MDM0Mjg5MC9waG90/by9ibHQtc2FuZHdp/Y2gtYW5kLWZyaWVz/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1TOW5tWks1ZnlD/WnN5UTNsQTdabWw4/QTQ0azdwWFVZVjNz/eUw5TWJZMzFVPQ" alt="Sandwich">
+                <h3>Sandwich</h3>
+                <p>Price: ₹150</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="food-item" data-name="Tacos" data-price="130">
+                <img src="https://imgs.search.brave.com/pFaGE4ciNga10t66qyVEOKA45ukMAEst4blfv1LRnZI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNjAy/MzU5NDYyL3Bob3Rv/L3BvcmstdGFjb3Mu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PXVCYTNGcnBxUmRp/WjVfTWJQSW1zbHJm/MWJwXy1Pak9oeGJt/Wmd3UGRreTg9" alt="Tacos">
+                <h3>Tacos</h3>
+                <p>Price: ₹130</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="food-item" data-name="Noodles" data-price="160">
+                <img src="https://imgs.search.brave.com/pNEAc7APSoId-jL8nUT6ytyDBAONIoKDMCQfyoeqBjQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM5/MzQwNDg5My9waG90/by90ZXJpeWFraS1z/aHJpbXAtd2l0aC1y/YW1lbi1ub29kbGVz/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz05TjNITjdSUlVi/RzVOQlZMd3lJM2ZV/SEJ5WERRVkk2RzNh/QkRVQlFCLVI4PQ" alt="Noodles">
+                <h3>Noodles</h3>
+                <p>Price: ₹160</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="food-item" data-name="Momos" data-price="110">
+                <img src="https://imgs.search.brave.com/p8i8tvXcJql7tkmYs0k6oCMtmi2j2qXHMKtBrbhx2F4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1LzgxLzg4LzEx/LzM2MF9GXzU4MTg4/MTE4MF9vWmN6RnZL/VmJFYUM4QXhMRGJ4/dU81ek0ycDJ6dGl3/Ny5qcGc" alt="Momos">
+                <h3>Momos</h3>
+                <p>Price: ₹110</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="food-item" data-name="Ice Cream" data-price="90">
+                <img src="https://imgs.search.brave.com/OCElQaf8RSbyTeLnE5HLwz46hBUPfYXkiki45yrAM5M/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTU3/NDcyOTEyL3Bob3Rv/L2ljZS1jcmVhbS1j/b21wb3NpdGlvbi1v/bi1hLWJvd2wuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPWRk/dFBORVpYQ2E0a3I0/MHNTejlhOElRbmhf/OVFLWmI2U05vSnZT/MFphMVE9" alt="Ice Cream">
+                <h3>Ice Cream</h3>
+                <p>Price: ₹90</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="food-item" data-name="Cold Drink" data-price="50">
+                <img src="https://imgs.search.brave.com/41m5BZt6vnjK_PKCP6rV9V2t0GADLjZmByE8fLcE3A0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c291dGhlcm5saXZp/bmcuY29tL3RobWIv/aE5NS2RmVUtuSlNE/VldXcXVhUW5xTFdu/Nm5vPS8xNTAweDAv/ZmlsdGVyczpub191/cHNjYWxlKCk6bWF4/X2J5dGVzKDE1MDAw/MCk6c3RyaXBfaWNj/KCkvU291dGhlcm4t/TGl2aW5nLXdhdGVy/bWVsb24tbWFyZ2Fy/aXRhcy1yb2Nrcy1y/ZWNpcGUtLTNYMi0x/NzQzLTRjNjY0N2Qz/NDc4ZjRkZDY4MDQ4/N2YyM2VhODhiM2Yz/LmpwZw" alt="Cold Drink">
+                <h3>Cold Drink</h3>
+                <p>Price: ₹50</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <button id="checkout">Proceed to Payment</button>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <h2>Select Payment Method</h2>
+            <button id="cod">Cash on Delivery</button>
+            <button id="upi">UPI Payment</button>
+            <div id="qr-code" class="hidden">
+                <img src="https://imgs.search.brave.com/BhD2p_CPn85XHRh2XBAhygEXbv8zAGlthxNOOLe31WU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM5/NzUzNzQyNS9waG90/by9xci1iYXJjb2Rl/LWZvci1kYXRhLWxh/YmVsaW5nLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz1Fb002/LVVHTVdNaVQ5eUVx/RW52NWRybEtnMGg5/czI3NWdvU3c1SV84/MmJjPQ" alt="UPI QR Code">
+                <button id="payment-done">Payment Done</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
